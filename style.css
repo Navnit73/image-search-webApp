@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    line-height: 1.6;
+
+}
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+
+}
+
+#search-input{
+    width: 60%;
+    min-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow:0 0 6px rgba(0 , 0, 0, 0.2) ;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #138065;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: none;
+   margin-left: 10px;
+   border-radius: 5px;
+
+
+}
+
+.search-result{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+}
+
+.search-results{
+    margin-bottom:60px ;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow:  0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.search-results img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:0.2s ease-in-out ;
+}
+
+.search-results:hover img{
+    opacity: 0.9;
+
+}
+
+.search-results a{
+font-size: 20px;
+text-decoration: none;
+color: #333;
+display: block;
+padding: 10px;
+text-transform: capitalize;
+}
+
+#show-more-btn{
+background-color: #008cba;
+font-size: 18px;
+color: #fff;
+padding: 10px 20px;
+text-align: center;
+display: block;
+margin: 30px auto;
+border-radius: 5px;
+cursor: pointer;
+border: none;
+display: none;
+
+
+}
+
+
+
+/* Existing styles */
+
+/* Add this media query for screens smaller than 768px (typical tablet size) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    form {
+        flex-direction: column; /* Stack input and button on smaller screens */
+        align-items: flex-start; /* Adjust alignment for stacked elements */
+    }
+
+    #search-input {
+        width: 100%; /* Make input full width on smaller screens */
+        min-width: auto; /* No minimum width needed on small screens */
+        margin-bottom: 20px; /* Reduce margin for stacked elements */
+    }
+
+    #search-button {
+        margin-left: 0; /* Remove left margin on stacked button */
+    }
+
+    .search-results {
+        width: 48%; /* Adjust width for better layout on smaller screens */
+    }
+}
+
+/* Add this media query for screens smaller than 480px (typical mobile size) */
+@media (max-width: 480px) {
+    .search-results {
+        width: 100%; /* Make search results full width on mobile */
+    }
+}
